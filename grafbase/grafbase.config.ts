@@ -19,7 +19,10 @@ const Project = g.model("Project", {
   category: g.string().search(),
   createdBy: g.relation(() => User)
 })
-
+const jwt = auth.JWT({
+  issuer: 'grafbase',
+  secret: '08PWFQwRg06FiimRydd+1NzW5VhNXVvFG8pK7AjvAa0='
+})
 export default config({
   schema: g
 })
